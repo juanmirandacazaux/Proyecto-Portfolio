@@ -1,0 +1,117 @@
+<!--
+Galería y Portfolio - archivo único HTML/CSS/JS
+Instrucciones:
+1) Abre este archivo en tu navegador (guardar como galeria_portfolio.html).
+2) Sustituye las URL de ejemplo por tus imágenes reales.
+3) Puedes editar las tarjetas de proyectos en el contenedor #portfolio-items.
+
+Características incluidas:
+- Grid responsivo de imágenes (galería) con filtro por categoría
+- Lightbox/modal para ver imagen ampliada
+- Sección de portfolio con tarjetas de proyecto y modal de detalle
+- Buscador para filtrar por texto
+- CSS moderno, animaciones y diseño responsive (mobile-first)
+- No requiere servidor (solo HTML estático)
+-->
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galería & Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">JM</div>
+        <div>
+          <h1>Galería & Portfolio</h1>
+          <p class="lead">Ejemplo de sitio donde muestra tus imágenes y proyectos — interactivo y responsive</p>
+        </div>
+      </div> 
+    </header>
+
+    <div class="controls">
+      <div class="search">
+        <input id="search" type="text" placeholder="Buscar imágenes o proyectos..." />
+      </div>
+      <div class="filters" id="filters">
+        <button class="btn active" data-filter="all">Todos</button>
+        <button class="btn" data-filter="fotografia">Fotografía</button>
+        <button class="btn" data-filter="diseño">Diseño</button>
+        <button class="btn" data-filter="ilustracion">Ilustración</button>
+        <button class="btn" data-filter="web">Web</button>
+      </div>
+    </div>
+
+    <!-- GALERÍA DE IMÁGENES -->
+    <section>
+      <h2 style="margin:0 0 12px 0">Galería</h2>
+      <div class="gallery" id="gallery">
+        <!-- Cada .card tiene data-tags para filtrar -->
+        <div class="card" data-title="Atardecer en la playa" data-tags="fotografia"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Atardecer" loading="lazy"><div class="meta">Fotografía</div></div>
+        <div class="card" data-title="Mockup app" data-tags="diseño web"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Mockup" loading="lazy"><div class="meta">Diseño</div></div>
+        <div class="card" data-title="Ilustración minimal" data-tags="ilustracion"><img src="https://images.unsplash.com/photo-1526318472351-c75fcf0706b2?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Ilustracion" loading="lazy"><div class="meta">Ilustración</div></div>
+        <div class="card" data-title="Ciudad nocturna" data-tags="fotografia"><img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Ciudad" loading="lazy"><div class="meta">Fotografía</div></div>
+        <div class="card" data-title="Landing page" data-tags="web diseño"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Landing" loading="lazy"><div class="meta">Web</div></div>
+        <div class="card" data-title="Retrato en estudio" data-tags="fotografia"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Retrato" loading="lazy"><div class="meta">Fotografía</div></div>
+        <div class="card" data-title="Branding minimal" data-tags="diseño"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Branding" loading="lazy"><div class="meta">Diseño</div></div>
+        <div class="card" data-title="Arte digital" data-tags="ilustracion"><img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Arte" loading="lazy"><div class="meta">Ilustración</div></div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO DE PROYECTOS -->
+    <section class="portfolio">
+      <h2 style="margin:18px 0">Portfolio</h2>
+      <div class="portfolio-grid" id="portfolio-items">
+        <article class="project" data-tags="web diseño" data-title="Sitio institucional para X">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop&crop=entropy" alt="Proyecto web">
+          <div class="info">
+            <h3>Sitio institucional para Cliente X</h3>
+            <p class="muted">Desarrollo web / WordPress / Diseño responsivo</p>
+          </div>
+          <div class="actions">
+            <button class="action-btn" data-action="view-project">Ver</button>
+            <a class="action-btn" href="#" onclick="return false">Enlace</a>
+          </div>
+        </article>
+
+        <article class="project" data-tags="diseño" data-title="Identidad visual Y">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&crop=entropy" alt="Branding">
+          <div class="info">
+            <h3>Identidad visual para Marca Y</h3>
+            <p class="muted">Branding / Papelería / Guía de estilo</p>
+          </div>
+          <div class="actions">
+            <button class="action-btn" data-action="view-project">Ver</button>
+            <a class="action-btn" href="#" onclick="return false">Descargar</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>¿Quieres que adapte esta plantilla con tus imágenes o paleta? Puedo hacerlo.</p>
+    </footer>
+  </div>
+
+  <!-- LIGHTBOX / MODAL -->
+  <div id="overlay" class="overlay hidden" aria-hidden="true">
+    <div class="lightbox" role="dialog" aria-modal="true">
+      <button id="closeBtn" class="close" aria-label="Cerrar">✕</button>
+      <div id="lightbox-content">
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption" style="margin:8px 0 0 0;color:var(--muted)"></p>
+      </div>
+    </div>
+  </div>
+
+ 
+
+<script src="script.js"></script>
+</body>
+</html>
