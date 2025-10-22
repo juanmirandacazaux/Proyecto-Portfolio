@@ -1,16 +1,16 @@
-# Galería & Portfolio
+# Gallery & Portfolio
 
-Un sitio web simple para mostrar imágenes y proyectos, hecho con **HTML**, **CSS** y **JavaScript**.
+A simple website to showcase images and projects, built with **HTML**, **CSS**, and **JavaScript**.
 
 ## 🚀 Demo
-[Ver sitio en GitHub Pages](https://tuusuario.github.io/galeria-portfolio)
+[View the site on GitHub Pages](https://tuusuario.github.io/galeria-portfolio)
 
-## 🧰 Tecnologías
+## 🧰 Technologies
 - HTML5
 - CSS3 (Grid + Flexbox)
-- JavaScript Vanilla
+- Vanilla JavaScript
 
-## 📦 Instalación
-1. Clona este repositorio:
+## 📦 Installation
+1. Clone this repository:
    ```bash
    git clone https://github.com/tuusuario/galeria-portfolio.git
